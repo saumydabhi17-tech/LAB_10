@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStore | Premium Products</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * {
+            font-family: Calibri, sans-serif;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #111111;
+            color: #ffffff;
+        }
+
+        .product-card {
+            background-color: #1e1e1e;
+            border: 1px solid #333333;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: #d4af37;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 190px;
+            object-fit: contain;
+            background-color: #ffffff;
+            padding: 10px;
+        }
+
+        .buy-button {
+            background-color: #d4af37;
+            color: #111111;
+            border-radius: 6px;
+            transition: 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #f1d36b;
+            transform: scale(1.03);
+        }
+
+        .gold-text {
+            color: #d4af37;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="bg-black border-b border-yellow-600 p-5">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-3xl gold-text">MyStore.</h1>
+
+            <nav class="space-x-4 text-sm sm:text-base">
+                <a href="#" class="hover:text-yellow-400">Home</a>
+                <a href="#products" class="hover:text-yellow-400">Products</a>
+                <a href="#footer" class="hover:text-yellow-400">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-12 px-4">
+        <p class="gold-text uppercase tracking-widest text-sm mb-3">
+            Quality Meets Style
+        </p>
+
+        <h2 class="text-4xl sm:text-5xl mb-4">
+            Discover Our Collection
+        </h2>
+
+        <p class="text-gray-400 text-lg">
+            Premium products at amazing prices.
+        </p>
+    </section>
+
+    <!-- Products Section -->
+    <main id="products" class="max-w-6xl mx-auto px-5 pb-12">
+
+        <h2 class="text-3xl text-center gold-text mb-8">
+            Our Products
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img
+                    src="csm_Asus_ROG_Strix_14_b15b3a2bf8.jpg"
+                    alt="Laptop"
+                    class="product-image"
+                >
+
+                <div class="p-5">
+                    <h3 class="text-2xl mb-2">Laptop</h3>
+
+                    <p class="text-gray-400 mb-4">
+                        Powerful performance for work and gaming.
+                    </p>
+
+                    <p class="text-xl gold-text mb-4">₹45,999</p>
+
+                    <button
+                        class="buy-button w-full p-3"
+                        onclick="buyProduct('Laptop', 45999)">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img
+                    src="images.jpeg"
+                    alt="Mobile"
+                    class="product-image"
+                >
+
+                <div class="p-5">
+                    <h3 class="text-2xl mb-2">Mobile</h3>
+
+                    <p class="text-gray-400 mb-4">
+                        Smart features for your everyday life.
+                    </p>
+
+                    <p class="text-xl gold-text mb-4">₹19,999</p>
+
+                    <button
+                        class="buy-button w-full p-3"
+                        onclick="buyProduct('Mobile', 19999)">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img
+                    src="shopping.webp"
+                    alt="Shoes"
+                    class="product-image"
+                >
+
+                <div class="p-5">
+                    <h3 class="text-2xl mb-2">Shoes</h3>
+
+                    <p class="text-gray-400 mb-4">
+                        Comfort and style for every step.
+                    </p>
+
+                    <p class="text-xl gold-text mb-4">₹2,499</p>
+
+                    <button
+                        class="buy-button w-full p-3"
+                        onclick="buyProduct('Shoes', 2499)">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img
+                    src="shopping (1).webp"
+                    alt="Watch"
+                    class="product-image"
+                >
+
+                <div class="p-5">
+                    <h3 class="text-2xl mb-2">Watch</h3>
+
+                    <p class="text-gray-400 mb-4">
+                        A timeless accessory for your style.
+                    </p>
+
+                    <p class="text-xl gold-text mb-4">₹3,499</p>
+
+                    <button
+                        class="buy-button w-full p-3"
+                        onclick="buyProduct('Watch', 3499)">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-black border-t border-yellow-600 text-center p-6">
+        <h2 class="text-2xl gold-text mb-2">MyStore.</h2>
+
+        <p class="text-gray-400">
+            Premium Products. Exceptional Style.
+        </p>
+
+        <p class="text-gray-500 mt-4">
+            MyStore © 2026 | All Rights Reserved
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function buyProduct(name, price) {
+            alert(
+                "You selected: " + name +
+                "\nPrice: ₹" + price.toLocaleString("en-IN") +
+                "\n\nThis is a demo website. Online purchasing is not enabled."
+            );
+        }
+    </script>
+
+</body>
+</html>
+
